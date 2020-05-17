@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Exercise3-2</title>
+    <style type="text/css">
+
+        .converter {
+            width: 250px;
+            height: 100px;
+            padding:20px 0 0 20px;
+        }
+
+        .celcius {
+            width: 170px;
+            height: 20px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="converter">
+
+        <form>
+            Fahrenheit °F: <input type="text" id="fahrenheit" /> <br><br />
+
+            <input type="button" onClick="fahrenheitToCelcius()" Value="Convert" />
+
+            <input type="button" onClick="location.href='exercise3-1.html'" Value="Swap" /><br><br />
+
+            Celcius °C:
+            <div class="celcius">
+                <output type="text" id="celcius" />
+            </div>
+
+
+        </form>
+
+        <script type="text/javascript">
+
+            function fahrenheitToCelcius() {
+
+                fahrenheit = document.getElementById("fahrenheit").value;
+
+                document.getElementById("celcius").innerHTML = ((fahrenheit - 32) * 5) / 9;
+            }
+        </script>
+    </div>
+
+</body>
+</html>

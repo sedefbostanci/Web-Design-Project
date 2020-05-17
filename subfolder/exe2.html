@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Exercise2 css</title>
+
+    <style type="text/css">
+
+        .header1 {
+            height: 22px;
+            width: 250px;
+            border-width: 1px 1px 0 1px;
+            border-style: solid;
+            top: 40px;
+            left: 25px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            padding: 5px 0 3px 0;
+            font: bold 12px;
+            position: absolute;
+            background-color:darkolivegreen;
+        }
+
+        .header2 {
+            height: 22px;
+            width: 100px;
+            border-width: 1px 1px 0 1px;
+            border-style: solid;
+            top: 170px;
+            left: 25px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            padding: 5px 0 3px 0;
+            font: bold 12px;
+            position: absolute;
+            background-color:darkolivegreen;
+        }
+
+        .calculate {
+            height: 40px;
+            width: 550px;
+            top: 70px;
+            left: 25px;
+            border: 1px solid;
+            position: absolute;
+            background-color:olivedrab;
+            padding:20px 0 0 10px;
+        }
+
+        #div1 {
+            height: 40px;
+            width: 550px;
+            top: 200px;
+            left: 25px;
+            border: 1px solid;
+            position: absolute;
+            background-color:olivedrab;
+            padding:20px 0 0 10px;
+        }
+
+    </style>
+
+        
+</head>
+
+<body>
+
+    <div class="header1">
+        <b>Enter a number between 1 and 10</b>
+    </div>
+
+    <div class="header2">
+        <b>Results</b>
+    </div>
+
+    <div id="div1">
+
+    </div>
+
+    <div class="calculate">
+
+        Number:<input id="number1">
+        <button id="button1">Submit</button>
+        <p id="demo"></p>
+
+
+        <script type="text/javascript">
+
+            window.onload = function () {
+
+                var num = Math.floor(Math.random() * 10) + 1;
+
+                var button = document.getElementById("button1");
+
+                var divElement = document.getElementById("div1");
+
+                button.onclick = function () {
+
+                    var number1Element;
+
+                    number1Element = document.getElementById("number1").value;
+
+                    if (number1Element == num) {
+
+                        divElement.innerHTML = "You guessed, the number is " + number1Element;
+                    }
+                    else {
+
+                        divElement.innerHTML = "This is not the number : " + number1Element;
+                    }
+
+
+                }
+
+            };
+
+        </script>
+
+    </div>
+
+
+
+</body>
+</html>

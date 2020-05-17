@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 5 - Exercise 2</title>
+    
+</head>
+<body>
+
+    
+    <img id="img" src="logo.png" width="200" height="200">
+    
+    
+    <form>
+        The image address: <input type="text" id="address" />
+
+        <input type="button" onclick="changeImage()" value="submit">
+        
+        
+    </form>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nunc urna, in dapibus tortor dictum id. Quisque suscipit at sem eu ullamcorper. Nunc ac tellus sit amet arcu lobortis ornare. Maecenas scelerisque ut elit quis pharetra. In interdum posuere quam quis imperdiet. Quisque leo lectus, condimentum varius justo ac, maximus gravida mi. Morbi sed urna ac quam consequat suscipit ac vel urna.
+    </p>
+
+    <script type="text/javascript">
+
+        function changeImage() {
+
+            address = document.getElementById("address").value;
+
+            document.getElementById("img").src = address;
+        }
+
+        
+    </script>
+
+</body>
+</html>

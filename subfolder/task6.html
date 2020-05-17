@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>   </title>
+    <meta charset="utf-8" />
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/jquery-3.4.1.js"></script>
+    <style type="text/css">
+        .NewFormatingStyle{
+            background-color:white;
+            font:bold 12px verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Laboratory 6 - jQuery library- exercises list</h1>
+    <ol>
+        <li>
+            <label for="ChangeColorP-Blue">Change color of all paragraphs to blue </label>
+            <input type="submit" id="ChangeColorP-Blue" value="submit">
+        </li>
+        <li>
+            <label for="ChangeColorDIV-Green">Change color of all divs to green </label>
+            <input type="submit" id="ChangeColorDIV-Green" value="submit">
+        </li>
+        <li>
+            <label for="ChangeColorClass-Orange">Change color of all elements with the className="orange" to orange </label>
+            <input type="submit" id="ChangeColorClass-Orange" value="submit">
+        </li>
+        <li>
+            <label for="text-1">The text for inserting in the ul list</label>
+            <input type="text" id="text-1" name="text-1">
+            <input type="submit" id="button1" value="submit">
+        </li>
+        <li>
+            <label for="InsertBeforeDiv">Insert div with paragraph before Div id="DivBeforeAfter" </label>
+            <input type="submit" id="InsertBeforeDiv" value="submit">
+        </li>
+        <li>
+            <label for="InsertAfterDiv">Insert div with paragraph after Div id="DivBeforeAfter" </label>
+            <input type="submit" id="InsertAfterDiv" value="submit">
+        </li>
+        <li>
+            <label for="SetClassForLastParagraph">Set the class="NewFormatingStyle" for the last paragraph in the web page </label>
+            <input type="submit" id="SetClassForLastParagraph" value="submit">
+        </li>
+        <li>
+            <label for="AddBorder-Paragraph-DivBeforeAfter">Set the border and grey background color for the paragraph inside div id="DivBeforeAfter" </label>
+            <input type="submit" id="AddBorder-Paragraph-DivBeforeAfter" value="submit">
+        </li>
+
+    </ol>
+    <h2>Header 2</h2>
+    <p>Paragraph 1</p>
+    <div>Div 1</div>
+    <p>Paragraph 2</p>
+    <div>Div 2</div>
+
+    <p class="orange">Orange paragraph</p>
+    <div class="orange">Orange div</div>
+    <h3 class="orange"> Orange h3 element</h3>
+
+    <ul id="insert1">
+        <li>Li 1</li>
+        <li>Li 2</li>
+        <li>Li 3</li>
+    </ul>
+
+    <div id="DivBeforeAfer">
+        DivBeforeAfter
+        <p> Child of the div id="DivBeforeAfter" </p>
+    </div>
+
+    <p class="orange">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus blandit fringilla. In id lectus eget orci gravida finibus.
+        Pellentesque molestie, arcu id tincidunt hendrerit, ligula nulla pharetra turpis, in tempor metus sapien sit amet sem.
+        Maecenas sit amet sem bibendum, facilisis quam id, molestie turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+        per inceptos himenaeos. Aenean nec justo dignissim, pharetra turpis sed, tincidunt purus. Cras vulputate quis libero vel aliquam.
+        Vestibulum facilisis dictum neque at consequat.
+    </p>
+
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#ChangeColorP-Blue").click(function () {
+                $('p').css("background", "blue");
+                $('div').css("background", "red");
+            });
+
+        });
+
+        $(function () {  
+            $("#ChangeColorDIV-Green").click(function () {
+                
+                $('div').css("background", "green");
+            });
+        });
+
+         $(function () {      
+            $("#ChangeColorClass-Orange").click(function () {
+                
+                $(".orange").css("background", "orange");
+            });
+           
+         });
+
+        $(function(){
+            $("#button1").click(function () {
+                var str = $("#text-1").val();
+                
+                $('#insert1').append
+                ('<li>'+str); 
+            });
+        });
+
+        $(function () {
+            $("#InsertBeforeDiv").click(function () {
+                $("<div><p>Text for inserting before div</p></div>").insertBefore('#DivBeforeAfer');
+            });
+        });
+
+        $(function () {
+            $("#InsertAfterDiv").click(function () {
+                $("<div><p>Text for inserting after div</p></div>").insertAfter('#DivBeforeAfer');
+            });
+        });
+
+         $(function () {
+            $("#SetClassForLastParagraph").click(function () {
+                $("p").last().addClass("NewFormatingStyle");
+            });
+         });
+
+        $(function () {      
+            $("#AddBorder-Paragraph-DivBeforeAfter").click(function () {
+                
+                $("#DivBeforeAfer").children().css("background", "grey");
+                $("#DivBeforeAfer").children().css("border", "1px solid black");
+            });
+           
+         });
+    </script>
+</body>
+</html>

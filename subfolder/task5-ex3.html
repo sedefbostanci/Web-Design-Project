@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 5 - Exercise 3</title>
+
+</head>
+<body>
+    <ul id="insert1">
+
+        <li >Li 1</li>
+        <li >Li 2</li>
+        <li >Li 3</li>
+    </ul>
+    <form>
+
+        The address for inserting before: <input type="text" id="address" />
+
+        <input type="button" onclick="takeAddress()" value="Submit">
+
+    </form>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nunc urna, in dapibus tortor dictum id. Quisque suscipit at sem eu ullamcorper. Nunc ac tellus sit amet arcu lobortis ornare. Maecenas scelerisque ut elit quis pharetra. In interdum posuere quam quis imperdiet. Quisque leo lectus, condimentum varius justo ac, maximus gravida mi. Morbi sed urna ac quam consequat suscipit ac vel urna.
+    </p>
+
+    <script type="text/javascript">
+
+        function takeAddress() {
+
+            var ul = document.getElementById("insert1");
+            var li4 = document.createElement("li");
+            var li_a = document.createElement("a");
+
+            li4.appendChild(li_a);
+
+            address = document.getElementById("address").value;
+
+            var add = document.createTextNode(address);
+
+            li_a.appendChild(add);
+            li_a.setAttribute('href', address);
+
+            ul.insertBefore(li4, ul.childNodes[0]);
+        }
+
+
+    </script>
+
+</body>
+</html>

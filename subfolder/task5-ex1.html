@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task5-Exercise1</title>
+</head>
+
+<body>
+    <p class="change">Changed text after clicking on the button.</p>
+
+    <button onclick="swapStyleSheet('styletext.css')">submit</button>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nunc urna, in dapibus tortor dictum id. Quisque suscipit at sem eu ullamcorper. Nunc ac tellus sit amet arcu lobortis ornare. Maecenas scelerisque ut elit quis pharetra. In interdum posuere quam quis imperdiet. Quisque leo lectus, condimentum varius justo ac, maximus gravida mi. Morbi sed urna ac quam consequat suscipit ac vel urna.
+    </p>
+
+    <link id="pagestyle" rel="stylesheet" type="text/css">
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+</body>
+</html>
